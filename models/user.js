@@ -53,7 +53,7 @@ const { Schema } = mongoose;
       return this._password;
     })
 
-  userSchema.method={
+  userSchema.methods={
     authenticate: function(plainpassword)
     {
       return this.securePassword(password)===this.encry_password;
