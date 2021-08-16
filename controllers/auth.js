@@ -83,17 +83,17 @@ exports.isAuthenticated=(req,res,next)=>{
   {
     res.status(400).json({
       error:"ACCESS DENIED!"
-    })
+    });
   }
   next();
-}
+};
 
 exports.isAdmin = (req, res,next)=>{
   if(req.profile.role==0)
   {
     res.status(400).json({
       error:"You are not ADMIN, ACCESS DENIED"
-    })
+    });
   }
   next();
-}
+};
