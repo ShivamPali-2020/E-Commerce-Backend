@@ -1,6 +1,5 @@
 require('dotenv').config()
 const express = require('express');
-// var bodyParser = require('body-parser')
 const cookieParser = require("cookie-parser");
 const cors= require("cors");
 const mongoose = require('mongoose');
@@ -8,6 +7,9 @@ const mongoose = require('mongoose');
 
 //Importing routers
 const authRoute = require("./routes/auth")
+const userRoute = require("./routes/user")
+
+
 
 const app= express();
 
@@ -31,6 +33,9 @@ app.use(cors())
 
 //My Routes
 app.use("/api",authRoute);
+app.use("/api",userRoute);
+
+
 
 //PORT
 const port= process.env.PORT || 3000;

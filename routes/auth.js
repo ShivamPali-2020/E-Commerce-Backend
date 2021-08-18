@@ -20,7 +20,7 @@ router.post("/signin",
 
 router.get("/testroute",isSignedin,(req,res)=>{
     res.send(
-        "Autherised User"
+        req.auth
     )
 });
 
